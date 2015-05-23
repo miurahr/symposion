@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.db import IntegrityError, transaction
 from django.db.models import Q
 
-from markitup.widgets import MarkItUpWidget
+from markedit.widgets import MarkEdit
 
 from symposion.schedule.models import (Day, Presentation, Room, SlotKind, Slot,
                                        SlotRoom)
@@ -43,7 +43,7 @@ class SlotEditForm(forms.Form):
     def build_content_override_field(self):
         kwargs = {
             "label": "Content",
-            "widget": MarkItUpWidget(),
+            "widget": MarkEdit(),
             "required": False,
             "initial": self.slot.content_override,
         }

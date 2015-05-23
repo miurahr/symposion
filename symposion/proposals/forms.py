@@ -2,7 +2,6 @@ from django import forms
 from django.db.models import Q
 
 from symposion.proposals.models import SupportingDocument
-# from markitup.widgets import MarkItUpWidget
 
 
 # @@@ generic proposal form
