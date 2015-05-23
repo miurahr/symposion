@@ -1,6 +1,6 @@
 from django import forms
 
-from markitup.widgets import MarkItUpWidget
+from markedit.widgets import MarkEdit
 
 from .models import Page
 
@@ -11,8 +11,8 @@ class PageForm(forms.ModelForm):
         model = Page
         fields = ["title", "body", "path"]
         widgets = {
-            "body": MarkItUpWidget(),
             "path": forms.HiddenInput(),
+            "body": MarkEdit(),
         }
 
 

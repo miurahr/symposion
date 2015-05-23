@@ -8,8 +8,6 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from markitup.fields import MarkupField
-
 from taggit.managers import TaggableManager
 
 import reversion
@@ -20,13 +18,13 @@ from .managers import PublishedPageManager
 class Page(models.Model):
 
     STATUS_CHOICES = (
-        (1, _("Draft")),
-        (2, _("Public")),
+        (1, _(u"Draft")),
+        (2, _(u"Public")),
     )
 
     title = models.CharField(max_length=100)
     path = models.CharField(max_length=100, unique=True)
-    body = MarkupField()
+    body = models.TextField()
     status = models.IntegerField(choices=STATUS_CHOICES, default=2)
     publish_date = models.DateTimeField(default=datetime.datetime.now)
     created = models.DateTimeField(editable=False, default=datetime.datetime.now)
