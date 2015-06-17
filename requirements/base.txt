@@ -10,4 +10,5 @@ django-user-accounts==1.0
 easy-thumbnails==2.2
 html5lib==0.999
 markdown==2.5.2
+markedit==0.2.dev3
 pytz==2014.10
