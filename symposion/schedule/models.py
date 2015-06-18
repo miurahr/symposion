@@ -229,7 +229,7 @@ class SessionRole(models.Model):
     role = models.IntegerField(choices=SESSION_ROLE_TYPES)
     status = models.NullBooleanField()
 
-    submitted = models.DateTimeField(default=datetime.now)
+    submitted = models.DateTimeField(default=datetime.datetime.now)
 
     class Meta:
         unique_together = [("session", "user", "role")]
