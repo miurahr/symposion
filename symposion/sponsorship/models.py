@@ -1,5 +1,6 @@
 import datetime
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -11,6 +12,39 @@ from django.contrib.auth.models import User
 from symposion.conference.models import Conference
 
 from symposion.sponsorship.managers import SponsorManager
+
+
+# The benefits we track as individual fields on sponsors
+# Names are the names in the database as defined by organizers.
+# Field names are the benefit names, lowercased, with
+# spaces changed to _, and with "_benefit" appended.
+# Column titles are arbitrary.
+
+# "really just care about the ones we have today: print logo, web logo, print description, web description and the ad."
+
+BENEFITS = [
+    {
+        'name': 'Web logo',
+        'field_name': 'web_logo_benefit',
+        'column_title': _(u'Web Logo'),
+    }, {
+        'name': 'Print logo',
+        'field_name': 'print_logo_benefit',
+        'column_title': _(u'Print Logo'),
+    }, {
+        'name': 'Company Description',
+        'field_name': 'company_description_benefit',
+        'column_title': _(u'Web Desc'),
+    }, {
+        'name': 'Print Description',
+        'field_name': 'print_description_benefit',
+        'column_title': _(u'Print Desc'),
+    }, {
+        'name': 'Advertisement',
+        'field_name': 'advertisement_benefit',
+        'column_title': _(u'Ad'),
+    }
+]
 
 
 class SponsorLevel(models.Model):
@@ -27,7 +61,7 @@ class SponsorLevel(models.Model):
         verbose_name_plural = _("sponsor levels")
 
     def __unicode__(self):
-        return self.name
+        return u"%s %s" % (self.conference, self.name)
 
     def sponsors(self):
         return self.sponsor_set.filter(active=True).order_by("added")
@@ -51,6 +85,13 @@ class Sponsor(models.Model):
     sponsor_logo = models.ForeignKey("SponsorBenefit", related_name="+", null=True, blank=True,
                                      editable=False)
 
+    # Whether things are complete
+    # True = complete, False = incomplate, Null = n/a for this sponsor level
+    web_logo_benefit = models.NullBooleanField(help_text=_(u"Web logo benefit is complete"))
+    print_logo_benefit = models.NullBooleanField(help_text=_(u"Print logo benefit is complete"))
+    print_description_benefit = models.NullBooleanField(help_text=_(u"Print description benefit is complete"))
+    company_description_benefit = models.NullBooleanField(help_text=_(u"Company description benefit is complete"))
+
     objects = SponsorManager()
 
     def __unicode__(self):
@@ -59,6 +100,15 @@ class Sponsor(models.Model):
     class Meta:
         verbose_name = _("sponsor")
         verbose_name_plural = _("sponsors")
+        ordering = ['name']
+
+    def save(self, *args, **kwargs):
+        # Set fields related to benefits being complete
+        for benefit in BENEFITS:
+            field_name = benefit['field_name']
+            benefit_name = benefit['name']
+            setattr(self, field_name, self.benefit_is_complete(benefit_name))
+            super(Sponsor, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         if self.active:
