@@ -1,6 +1,4 @@
 from django.contrib import admin
-from django.utils.html import escape
-from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 
 from symposion.sponsorship.models import SponsorLevel, Sponsor, Benefit, \
@@ -47,6 +45,7 @@ class SponsorAdmin(admin.ModelAdmin):
     ]
     inlines = [SponsorBenefitInline]
     list_display = ["name", "external_url", "level", "active"]
+    list_filter = ["level", "active"]
 
     def get_form(self, *args, **kwargs):
         # @@@ kinda ugly but using choices= on NullBooleanField is broken
