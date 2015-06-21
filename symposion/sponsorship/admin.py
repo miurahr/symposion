@@ -46,8 +46,8 @@ class SponsorAdmin(admin.ModelAdmin):
         })
     ]
     inlines = [SponsorBenefitInline]
-<<<<<<< HEAD
     list_display = ["name", "external_url", "level", "active", "contact", "applicant_field"]
+    list_filter = ["level", "active"]
 
     def contact(self, sponsor):
         return mark_safe('<a href="mailto:%s">%s</a>' % (escape(sponsor.contact_email), escape(sponsor.contact_name)))
@@ -57,10 +57,6 @@ class SponsorAdmin(admin.ModelAdmin):
         email = sponsor.applicant.email
         return mark_safe('<a href="mailto:%s">%s</a>' % (escape(email), escape(name)))
     applicant_field.short_description = _(u"Applicant")
-=======
-    list_display = ["name", "external_url", "level", "active"]
-    list_filter = ["level", "active"]
->>>>>>> admin_sponsor_benefit
 
     def get_form(self, *args, **kwargs):
         # @@@ kinda ugly but using choices= on NullBooleanField is broken
