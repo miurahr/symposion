@@ -39,10 +39,6 @@ BENEFITS = [
         'name': 'Print Description',
         'field_name': 'print_description_benefit',
         'column_title': _(u'Print Desc'),
-    }, {
-        'name': 'Advertisement',
-        'field_name': 'advertisement_benefit',
-        'column_title': _(u'Ad'),
     }
 ]
 
