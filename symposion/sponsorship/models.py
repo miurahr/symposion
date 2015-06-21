@@ -106,6 +106,7 @@ class Sponsor(models.Model):
                     sponsor=self, benefit=benefit_level.benefit)
 
                 # and set to default limits for this level.
+                sponsor_benefit.max_characters = benefit_level.max_characters
                 sponsor_benefit.max_words = benefit_level.max_words
                 sponsor_benefit.other_limits = benefit_level.other_limits
 
@@ -124,7 +125,7 @@ class Sponsor(models.Model):
         # Any remaining sponsor benefits that don't normally belong to
         # this level are set to inactive
         self.sponsor_benefits.exclude(pk__in=allowed_benefits)\
-            .update(active=False, max_words=None, other_limits="")
+            .update(active=False, max_words=None, max_characters=None, other_limits="")
 
     def send_coordinator_emails(self):
         pass  # @@@ should this just be done centrally?
@@ -168,6 +169,7 @@ class BenefitLevel(models.Model):
 
     # default limits for this benefit at given level
     max_words = models.PositiveIntegerField(_("max words"), blank=True, null=True)
+    max_characters = models.PositiveIntegerField(_("max characters"), blank=True, null=True)
     other_limits = models.CharField(_("other limits"), max_length=200, blank=True)
 
     class Meta:
@@ -185,6 +187,7 @@ class SponsorBenefit(models.Model):
 
     # Limits: will initially be set to defaults from corresponding BenefitLevel
     max_words = models.PositiveIntegerField(_("max words"), blank=True, null=True)
+    max_characters = models.PositiveIntegerField(_("max characters"), blank=True, null=True)
     other_limits = models.CharField(_("other limits"), max_length=200, blank=True)
 
     # Data: zero or one of these fields will be used, depending on the
@@ -200,10 +203,26 @@ class SponsorBenefit(models.Model):
 
     def clean(self):
         num_words = len(self.text.split())
-        if self.max_words and num_words > self.max_words:
+        if (self.max_words and num_words > self.max_words) or (self.max_characters and len(self.text) > self.max_characters):
+
             raise ValidationError(
-                "Sponsorship level only allows for %s words, you provided %d." % (
-                    self.max_words, num_words))
+                _("Sponsorship level only allows for "
+                  "%(max_characters)s characters and/or %(max_words)s words,"
+                  "but you provided %(num_characters)d chars/%(num_words)d words.") %
+                {
+                    'max_characters': self.max_characters,
+                    'max_words': self.max_words,
+                    'num_words': num_words,
+                }
+            )
+        editable_fields = self.data_fields()
+        if bool(self.text) and 'text' not in editable_fields:
+            raise ValidationError("Benefit type %s may not have text"
+                                  % self.benefit.type)
+        if bool(self.upload) and 'upload' not in editable_fields:
+            raise ValidationError("Benefit type %s may not have an uploaded "
+                                  "file (%s)" % (self.benefit.type,
+                                                 self.upload))
 
     def data_fields(self):
         """

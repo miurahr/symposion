@@ -16,7 +16,7 @@ class SponsorBenefitInline(admin.StackedInline):
         (None, {
             "fields": [
                 ("benefit", "active"),
-                ("max_words", "other_limits"),
+                ("max_characters", "max_words", "other_limits"),
                 "text",
                 "upload",
             ]
