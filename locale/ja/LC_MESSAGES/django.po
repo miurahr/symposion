@@ -1,0 +1,515 @@
+# Symposion japanese translation.
+# Copyright (C) 2014-2015, pinax team
+# This file is distributed under the same license as the symposion package.
+# Hiroshi Miura <miurahr@linux.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: symposion\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-05 10:56+0900\n"
+"PO-Revision-Date: 2015-06-26 22:34+0900\n"
+"Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
+"Language-Team: Japanese translation team <https://www.transifex.com/projects/"
+"p/symposion/language/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: symposion/boxes/models.py:21
+msgid "box"
+msgstr "ボックス"
+
+#: symposion/boxes/models.py:22
+msgid "boxes"
+msgstr "ボックス"
+
+#: symposion/cms/models.py:21
+msgid "Draft"
+msgstr "草稿"
+
+#: symposion/cms/models.py:22
+msgid "Public"
+msgstr "公開"
+
+#: symposion/cms/models.py:40
+msgid "page"
+msgstr "ページ"
+
+#: symposion/cms/models.py:41
+msgid "pages"
+msgstr "ページ"
+
+#: symposion/cms/models.py:59
+msgid "Path can only contain letters, numbers and hyphens and end with /"
+msgstr ""
+"パス名には、英数字、ハイフン(-)のみが使えます。また末尾は'/'の必要がありま"
+"す。"
+
+#: symposion/conference/models.py:15
+msgid "title"
+msgstr "タイトル"
+
+#: symposion/conference/models.py:18 symposion/conference/models.py:58
+msgid "start date"
+msgstr "開始日"
+
+#: symposion/conference/models.py:19 symposion/conference/models.py:59
+msgid "end date"
+msgstr "終了日"
+
+#: symposion/conference/models.py:22
+msgid "timezone"
+msgstr "タイムゾーン"
+
+#: symposion/conference/models.py:41 symposion/conference/models.py:52
+#: symposion/sponsorship/models.py:48
+msgid "conference"
+msgstr "カンファレンス"
+
+#: symposion/conference/models.py:42
+msgid "conferences"
+msgstr "カンファレンス"
+
+#: symposion/conference/models.py:54 symposion/sponsorship/models.py:49
+#: symposion/sponsorship/models.py:229
+msgid "name"
+msgstr "名前"
+
+#: symposion/conference/models.py:65
+msgid "section"
+msgstr "セクション"
+
+#: symposion/conference/models.py:66
+msgid "sections"
+msgstr "セクション"
+
+#: symposion/proposals/forms.py:17
+msgid "Email address"
+msgstr "電子メールアドレス"
+
+#: symposion/proposals/forms.py:32
+msgid ""
+"You have submitted the Proposal author's email address. Please select "
+"another email address."
+msgstr ""
+"講演提案者の電子メールアドレスを投稿しました。他の電子メールアドレスを選択し"
+"てください。"
+
+#: symposion/proposals/forms.py:41
+msgid "This email address has already been invited to your talk proposal"
+msgstr "既に、この電子メールアドレスで、講演提案に招待されています。"
+
+#: symposion/proposals/models.py:69
+msgid "Name"
+msgstr "名前"
+
+#: symposion/proposals/models.py:84
+msgid "Brief Description"
+msgstr "概要"
+
+#: symposion/proposals/models.py:86
+msgid ""
+"If your proposal is accepted this will be made public and printed in the "
+"program. Should be one paragraph, maximum 400 characters."
+msgstr ""
+"もし提案が受諾されたら、これは公開され、配布されるプログラムに印刷されます。"
+"段落は一つのみで、４００文字以内で記載してください。"
+
+#: symposion/proposals/models.py:90
+msgid "Detailed Abstract"
+msgstr "提案の詳細"
+
+#: symposion/proposals/models.py:91
+msgid ""
+"Detailed outline. Will be made public if your proposal is accepted. Edit "
+"using <a href='http://daringfireball.net/projects/markdown/basics' "
+"target='_blank'>Markdown</a>."
+msgstr ""
+"講演詳細：提案が受諾された場合に公開されます。<a href=\"http://www.markdown."
+"jp/what-is-markdown/\" target='_blank'>Markdown</a>を用いて記述してください。"
+
+#: symposion/proposals/models.py:97
+msgid ""
+"Anything else you'd like the program committee to know when making their "
+"selection: your past experience, etc. This is not made public. Edit using <a "
+"href='http://daringfireball.net/projects/markdown/basics' "
+"target='_blank'>Markdown</a>."
+msgstr ""
+"プログラム委員に、講演者の過去の経験など、とくに伝えたいことがあれば、記述し"
+"てください。これは公開されることはありません。<a href=\"http://www.markdown."
+"jp/what-is-markdown/\" target='_blank'>Markdown</a>を用いて記述してください。"
+
+#: symposion/proposals/models.py:131
+msgid "Undecided"
+msgstr "未決定"
+
+#: symposion/proposals/models.py:159
+msgid "Pending"
+msgstr "ペンディング"
+
+#: symposion/proposals/models.py:160
+msgid "Accepted"
+msgstr "アクセプト"
+
+#: symposion/proposals/models.py:161
+msgid "Declined"
+msgstr "リジェクト"
+
+#: symposion/proposals/views.py:41
+#, python-brace-format
+msgid ""
+"To submit a proposal, please <a href='{0}'>log in</a> and create a speaker "
+"profile via the dashboard."
+msgstr ""
+" <a href='{0}'>ログイン</a> して、ダッシュボードから講演者プロフィールを入力"
+"してから、提案の投稿をおねがいします。"
+
+#: symposion/proposals/views.py:50
+#, python-brace-format
+msgid "To submit a proposal, first <a href='{0}'>create a speaker profile</a>."
+msgstr ""
+"講演提案の投稿前に、まず <a href='{0}'>講演者プロフィール</a>を作成してくださ"
+"い。"
+
+#: symposion/reviews/models.py:102
+msgid "proposal message"
+msgstr "提案メッセージ"
+
+#: symposion/reviews/models.py:103
+msgid "proposal messages"
+msgstr "提案メッセージ"
+
+#: symposion/reviews/models.py:185
+msgid "review"
+msgstr "レビュー"
+
+#: symposion/reviews/models.py:186
+msgid "reviews"
+msgstr "レビュー"
+
+#: symposion/reviews/models.py:202
+msgid "latest vote"
+msgstr "最新の投票"
+
+#: symposion/reviews/models.py:203
+msgid "latest votes"
+msgstr "最新の投票"
+
+#: symposion/reviews/models.py:290
+msgid "proposal_result"
+msgstr "提案の結果"
+
+#: symposion/reviews/models.py:291
+msgid "proposal_results"
+msgstr "提案の結果"
+
+#: symposion/reviews/models.py:304
+msgid "comment"
+msgstr "コメント"
+
+#: symposion/reviews/models.py:305
+msgid "comments"
+msgstr "コメント"
+
+#: symposion/reviews/models.py:316
+msgid "notification template"
+msgstr "通知テンプレート"
+
+#: symposion/reviews/models.py:317
+msgid "notification templates"
+msgstr "通知テンプレート"
+
+#: symposion/schedule/models.py:24
+msgid "schedule"
+msgstr "スケジュール"
+
+#: symposion/schedule/models.py:25
+msgid "schedules"
+msgstr "スケジュール"
+
+#: symposion/schedule/models.py:39
+msgid "date"
+msgstr "日付"
+
+#: symposion/schedule/models.py:40
+msgid "dates"
+msgstr "日程"
+
+#: symposion/schedule/models.py:53
+msgid "room"
+msgstr "部屋"
+
+#: symposion/schedule/models.py:54
+msgid "rooms"
+msgstr "部屋"
+
+#: symposion/schedule/models.py:70
+msgid "slot kind"
+msgstr "講演枠の種類"
+
+#: symposion/schedule/models.py:71
+msgid "slot kinds"
+msgstr "講演枠の種類"
+
+#: symposion/schedule/models.py:143
+msgid "slot"
+msgstr "講演枠"
+
+#: symposion/schedule/models.py:144
+msgid "slots"
+msgstr "講演枠"
+
+#: symposion/schedule/models.py:161
+msgid "slot room"
+msgstr "講演枠の部屋割り当て"
+
+#: symposion/schedule/models.py:162
+msgid "slot rooms"
+msgstr "講演枠の部屋割り当て"
+
+#: symposion/schedule/models.py:198
+msgid "presentation"
+msgstr "プレゼンテーション"
+
+#: symposion/schedule/models.py:199
+msgid "presentations"
+msgstr "プレゼンテーション"
+
+#: symposion/schedule/models.py:236
+msgid "session"
+msgstr "セッション"
+
+#: symposion/schedule/models.py:237
+msgid "sessions"
+msgstr "セッション"
+
+#: symposion/schedule/models.py:259
+msgid "session role"
+msgstr "セッションでの役割"
+
+#: symposion/schedule/models.py:260
+msgid "session roles"
+msgstr "セッションでの役割"
+
+#: symposion/speakers/forms.py:16
+msgid ""
+"If you've submitted multiple proposals, please let us know if you only want "
+"to give one or if you'd like to give two talks."
+msgstr ""
+"複数の提案をしている場合に、どれか一つの講演をしたいのか、２つの講演をしたい"
+"のか、を記入してください。"
+
+#: symposion/speakers/forms.py:47
+msgid "Please limit speaker biography to 100 words or less"
+msgstr "講演者略歴は１００ワード以内にしてください。"
+
+#: symposion/speakers/models.py:19
+msgid "As you would like it to appear in the conference program."
+msgstr "カンファレンスのプログラム冊子に掲載されたい表現にしてください。"
+
+#: symposion/speakers/models.py:22
+msgid ""
+"A little bit about you. 100 words or less, please. This will be used in "
+"print publications so please keep it simple, no links or formatting."
+msgstr ""
+"貴方について記述してください。１００ワード未満です。この記述は、印刷配布物に"
+"記載されます。平易な文で、リンクや整形はしないでください。"
+
+#: symposion/speakers/models.py:29
+msgid "Your Twitter account"
+msgstr "Twitterアカウント"
+
+#: symposion/speakers/models.py:41
+msgid "speaker"
+msgstr "講演者"
+
+#: symposion/speakers/models.py:42
+msgid "speakers"
+msgstr "講演者"
+
+#: symposion/sponsorship/admin.py:59
+msgid "Applicant"
+msgstr "応募者"
+
+#: symposion/sponsorship/admin.py:65
+msgid "unreviewed"
+msgstr "レビュー前"
+
+#: symposion/sponsorship/admin.py:66
+msgid "approved"
+msgstr "承認済み"
+
+#: symposion/sponsorship/admin.py:67
+msgid "rejected"
+msgstr "却下済み"
+
+#: symposion/sponsorship/admin.py:115
+msgid "None"
+msgstr ""
+
+#: symposion/sponsorship/models.py:29
+msgid "Web Logo"
+msgstr "Web用のロゴ"
+
+#: symposion/sponsorship/models.py:33
+msgid "Print Logo"
+msgstr "印刷用のロゴ"
+
+#: symposion/sponsorship/models.py:37
+msgid "Web Desc"
+msgstr "Web用の説明文"
+
+#: symposion/sponsorship/models.py:41
+msgid "Print Desc"
+msgstr "印刷用の説明文"
+
+#: symposion/sponsorship/models.py:50
+msgid "order"
+msgstr "順序"
+
+#: symposion/sponsorship/models.py:51
+msgid "cost"
+msgstr "経費"
+
+#: symposion/sponsorship/models.py:52 symposion/sponsorship/models.py:230
+msgid "description"
+msgstr "記述"
+
+#: symposion/sponsorship/models.py:52
+msgid "This is private."
+msgstr "これは非公開です。"
+
+#: symposion/sponsorship/models.py:56
+msgid "sponsor level"
+msgstr "スポンサーのグレード"
+
+#: symposion/sponsorship/models.py:57
+msgid "sponsor levels"
+msgstr "スポンサーのグレード"
+
+#: symposion/sponsorship/models.py:68
+msgid "applicant"
+msgstr "応募者"
+
+#: symposion/sponsorship/models.py:71
+msgid "Sponsor Name"
+msgstr "スポンサー名"
+
+#: symposion/sponsorship/models.py:72
+msgid "display URL"
+msgstr "表示するURL"
+
+#: symposion/sponsorship/models.py:73
+msgid "external URL"
+msgstr "外部URL"
+
+#: symposion/sponsorship/models.py:74
+msgid "annotation"
+msgstr "注記"
+
+#: symposion/sponsorship/models.py:75
+msgid "Contact Name"
+msgstr "連絡先の名前"
+
+#: symposion/sponsorship/models.py:76
+msgid "Contact Email"
+msgstr "連絡先のEmail"
+
+#: symposion/sponsorship/models.py:77 symposion/sponsorship/models.py:243
+msgid "level"
+msgstr "グレード"
+
+#: symposion/sponsorship/models.py:78
+msgid "added"
+msgstr "追加済み"
+
+#: symposion/sponsorship/models.py:79
+msgid "active"
+msgstr "有効"
+
+#: symposion/sponsorship/models.py:87
+msgid "Web logo benefit is complete"
+msgstr "Web用ロゴの掲出は完了済みです"
+
+#: symposion/sponsorship/models.py:88
+msgid "Print logo benefit is complete"
+msgstr "印刷用ロゴの手配は完了済みです。"
+
+#: symposion/sponsorship/models.py:89
+msgid "Print description benefit is complete"
+msgstr "印刷用の説明は、入稿済みです。"
+
+#: symposion/sponsorship/models.py:90
+msgid "Company description benefit is complete"
+msgstr "会社概要の掲出は完了済みです。"
+
+#: symposion/sponsorship/models.py:98 symposion/sponsorship/models.py:258
+msgid "sponsor"
+msgstr "スポンサー"
+
+#: symposion/sponsorship/models.py:99
+msgid "sponsors"
+msgstr "スポンサー"
+
+#: symposion/sponsorship/models.py:231
+msgid "type"
+msgstr "タイプ"
+
+#: symposion/sponsorship/models.py:233
+msgid "content type"
+msgstr ""
+
+#: symposion/sponsorship/models.py:242 symposion/sponsorship/models.py:259
+msgid "benefit"
+msgstr "スポンサー特典"
+
+#: symposion/sponsorship/models.py:246 symposion/sponsorship/models.py:263
+msgid "max words"
+msgstr "最大語数"
+
+#: symposion/sponsorship/models.py:247 symposion/sponsorship/models.py:264
+msgid "other limits"
+msgstr "他の制限"
+
+#: symposion/sponsorship/models.py:268
+msgid "text"
+msgstr "テキスト"
+
+#: symposion/sponsorship/models.py:269
+msgid "file"
+msgstr "ファイル"
+
+#: symposion/sponsorship/models.py:273
+msgid "True - benefit complete; False - benefit incomplete; Null - n/a"
+msgstr "True - 特典は実施済み、 Flase - 特典は未実施, Null - N/A"
+
+#: symposion/sponsorship/views.py:36
+msgid ""
+"Thank you for your sponsorship application. Please update your benefit "
+"details below."
+msgstr ""
+"スポンサーにご応募ありがとうございました。以下の特典について情報更新してくだ"
+"さい。"
+
+#: symposion/sponsorship/views.py:41
+msgid "Thank you for your sponsorship application."
+msgstr "スポンサーにご応募ありがとうございました。"
+
+#: symposion/teams/models.py:60
+msgid "team"
+msgstr "チーム"
+
+#: symposion/teams/models.py:61
+msgid "teams"
+msgstr "チーム"
+
+#: symposion/teams/models.py:81
+msgid "membership"
+msgstr "メンバーシップ"
+
+#: symposion/teams/models.py:82
+msgid "memberships"
+msgstr "メンバーシップ"
