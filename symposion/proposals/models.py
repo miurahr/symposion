@@ -77,7 +77,6 @@ class ProposalKind(models.Model):
         return self.name
 
 
-@python_2_unicode_compatible
 class ProposalBase(models.Model):
 
     objects = InheritanceManager()
@@ -112,7 +111,7 @@ class ProposalBase(models.Model):
     )
     speaker = models.ForeignKey(Speaker, related_name="proposals", verbose_name=_("Speaker"))
     additional_speakers = models.ManyToManyField(Speaker, through="AdditionalSpeaker",
-                                                 blank=True, verbose_name_plural=_("Addtional speakers"))
+                                                 blank=True, verbose_name=_("Addtional speakers"))
     cancelled = models.BooleanField(default=False, verbose_name=_("Cancelled"))
 
     def can_edit(self):
@@ -156,7 +155,6 @@ class ProposalBase(models.Model):
 reversion.register(ProposalBase)
 
 
-@python_2_unicode_compatible
 class AdditionalSpeaker(models.Model):
 
     SPEAKING_STATUS_PENDING = 1
@@ -185,7 +183,6 @@ def uuid_filename(instance, filename):
     return os.path.join("document", filename)
 
 
-@python_2_unicode_compatible
 class SupportingDocument(models.Model):
 
     proposal = models.ForeignKey(ProposalBase, related_name="supporting_documents", verbose_name=_("Proposal"))
