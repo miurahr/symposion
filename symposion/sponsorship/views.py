@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from cStringIO import StringIO
 import itertools
 import logging
@@ -15,6 +16,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import ugettext_lazy as _
 
 from symposion.sponsorship.forms import SponsorApplicationForm, \
     SponsorDetailsForm, SponsorBenefitsFormSet
@@ -90,7 +92,7 @@ def sponsor_detail(request, pk):
             form.save()
             formset.save()
 
-            messages.success(request, "Sponsorship details have been updated")
+            messages.success(request, _("Sponsorship details have been updated"))
 
             return redirect("dashboard")
     else:

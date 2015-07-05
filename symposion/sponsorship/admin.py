@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.contrib import admin
 from django.utils.html import escape
 from django.utils.safestring import mark_safe
@@ -62,9 +63,9 @@ class SponsorAdmin(admin.ModelAdmin):
         # @@@ kinda ugly but using choices= on NullBooleanField is broken
         form = super(SponsorAdmin, self).get_form(*args, **kwargs)
         form.base_fields["active"].widget.choices = [
-            (u"1", _("unreviewed")),
-            (u"2", _("approved")),
-            (u"3", _("rejected"))
+            ("1", _("unreviewed")),
+            ("2", _("approved")),
+            ("3", _("rejected"))
         ]
         return form
 

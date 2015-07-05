@@ -1,5 +1,7 @@
+from __future__ import unicode_literals
 from django import forms
 from django.forms import Textarea
+from django.utils.translation import ugettext_lazy as _
 
 from markedit.widgets import MarkEdit
 
@@ -36,6 +38,7 @@ class SpeakerCommentForm(forms.ModelForm):
 
 class BulkPresentationForm(forms.Form):
     talk_ids = forms.CharField(
+        label=_("Talk ids"),
         max_length=500,
-        help_text="Provide a comma seperated list of talk ids to accept."
+        help_text=_("Provide a comma seperated list of talk ids to accept.")
     )
