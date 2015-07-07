@@ -5,4 +5,5 @@ from django.utils.translation import ugettext_lazy as _
 
 class BoxesConfig(AppConfig):
     name = "symposion.boxes"
+    label = "symposion_boxes"
     verbose_name = _("Symposion Boxes")

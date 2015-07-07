@@ -5,4 +5,5 @@ from django.utils.translation import ugettext_lazy as _
 
 class TeamsConfig(AppConfig):
     name = "symposion.teams"
+    label = "symposion_teams"
     verbose_name = _("Symposion Teams")
