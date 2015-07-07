@@ -1,13 +1,12 @@
 from __future__ import unicode_literals
 import datetime
-from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import python_2_unicode_compatible
-
 from django.db import models
 from django.core.urlresolvers import reverse
 
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+from django.utils.encoding import python_2_unicode_compatible
+
 
 @python_2_unicode_compatible
 class Speaker(models.Model):
@@ -29,8 +28,8 @@ class Speaker(models.Model):
     photo = models.ImageField(upload_to="speaker_photos", blank=True,
                               verbose_name=_("Photo"))
     twitter_username = models.CharField(
-        max_length = 15,
-        blank = True,
+        max_length=15,
+        blank=True,
         help_text=_("Your Twitter account")
     )
     annotation = models.TextField(verbose_name=_("Annotation"))  # staff only
