@@ -288,8 +288,8 @@ class ProposalResult(models.Model):
         model._default_manager.filter(pk=self.pk).update(score=ProposalScoreExpression())
 
     class Meta:
-        verbose_name = _("proposal_result")
-        verbose_name_plural = _("proposal_results")
+        verbose_name = _("Proposal result")
+        verbose_name_plural = _("Proposal results")
 
 
 class Comment(models.Model):
@@ -302,8 +302,8 @@ class Comment(models.Model):
     commented_at = models.DateTimeField(default=datetime.now, verbose_name=_("Commented at"))
 
     class Meta:
-        verbose_name = _("comment")
-        verbose_name_plural = _("comments")
+        verbose_name = _("Comment")
+        verbose_name_plural = _("Comments")
 
 
 class NotificationTemplate(models.Model):
@@ -314,8 +314,8 @@ class NotificationTemplate(models.Model):
     body = models.TextField(verbose_name=_("Body"))
 
     class Meta:
-        verbose_name = _("notification template")
-        verbose_name_plural = _("notification templates")
+        verbose_name = _("Notification template")
+        verbose_name_plural = _("Notification templates")
 
 
 class ResultNotification(models.Model):
