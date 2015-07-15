@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from django.contrib import admin
 
-from symposion.schedule.models import Schedule, Day, Room, SlotKind, Slot, SlotRoom, Presentation, Session, SessionRole
+from symposion.schedule.models import Schedule, Day, Room, SlotKind, Slot, SlotRoom, Presentation
 
 
 admin.site.register(Schedule)
@@ -16,6 +16,4 @@ admin.site.register(
     SlotRoom,
     list_display=("slot", "room")
 )
-admin.site.register(Session)
-admin.site.register(SessionRole)
 admin.site.register(Presentation)
