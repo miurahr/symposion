@@ -77,6 +77,7 @@ class ProposalKind(models.Model):
         return self.name
 
 
+@python_2_unicode_compatible
 class ProposalBase(models.Model):
 
     objects = InheritanceManager()
@@ -151,6 +152,8 @@ class ProposalBase(models.Model):
             "kind": self.kind.name,
         }
 
+    def __str__(self):
+        return self.title
 
 reversion.register(ProposalBase)
 
