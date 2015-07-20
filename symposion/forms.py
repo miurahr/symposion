@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
 from collections import OrderedDict
+from distutils.version import StrictVersion
 
-from django import forms
+from django import forms, get_version
 
 import account.forms
 from django.utils.translation import ugettext_lazy as _
@@ -15,7 +16,6 @@ class SignupForm(account.forms.SignupForm):
 
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
-        del self.fields["username"]
         key_order = [
             "email",
             "email_confirm",
@@ -48,4 +48,10 @@ def reorder_fields(fields, order):
         if key not in order:
             del fields[key]
 
-    return OrderedDict(sorted(fields.items(), key=lambda k: order.index(k[0])))
+    if StrictVersion(get_version()) < StrictVersion('1.7.0'):
+        # fields is SortedDict
+        fields.keyOrder.sort(key=lambda k: order.index(k[0]))
+        return fields
+    else:
+        # fields is OrderedDict
+        return OrderedDict(sorted(fields.items(), key=lambda k: order.index(k[0])))
