@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
-from collections import OrderedDict
-from distutils.version import StrictVersion
+try:
+    from collections import OrderedDict
+except ImportError:
+    OrderedDict = None
 
-from django import forms, get_version
+from django import forms
 
 import account.forms
 from django.utils.translation import ugettext_lazy as _
@@ -48,7 +50,7 @@ def reorder_fields(fields, order):
         if key not in order:
             del fields[key]
 
-    if StrictVersion(get_version()) < StrictVersion('1.7.0'):
+    if not OrderedDict or hasattr(fields, "keyOrder"):
         # fields is SortedDict
         fields.keyOrder.sort(key=lambda k: order.index(k[0]))
         return fields
