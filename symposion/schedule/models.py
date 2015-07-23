@@ -185,7 +185,7 @@ class Presentation(models.Model):
 
     @property
     def number(self):
-        if self.proposal is None
+        if self.proposal is None:
             return None
         return self.proposal.number
 
