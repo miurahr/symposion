@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: symposion\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-07 19:32+0900\n"
-"PO-Revision-Date: 2015-07-07 19:33+0900\n"
+"PO-Revision-Date: 2015-07-24 07:20+0900\n"
 "Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
 "Language-Team: Japanese translation team <https://www.transifex.com/projects/"
 "p/symposion/language/ja/>\n"
@@ -618,7 +618,7 @@ msgstr "講演概要"
 
 #: symposion/schedule/models.py:184
 msgid "Proposal base"
-msgstr "提案メッセージ"
+msgstr "元の提案"
 
 #: symposion/schedule/models.py:208
 msgid "presentation"
