@@ -113,30 +113,6 @@ class ProposalBase(models.Model):
     additional_speakers = models.ManyToManyField(Speaker, through="AdditionalSpeaker",
                                                  blank=True, verbose_name=_("Addtional speakers"))
     cancelled = models.BooleanField(default=False, verbose_name=_("Cancelled"))
-    recording_release = models.BooleanField(
-        _("Recording Release"),
-        default=True,
-        help_text=_("By submitting your talk proposal, you agree to give "
-                    "permission to the Organization Team to record, edit, "
-                    "and release audio and/or video of your presentation. "
-                    "If you do not agree to this, please uncheck this box.")
-    )
-    additional_requirements = models.TextField(
-        _("Additional requirements"),
-        blank=True,
-        help_text=_("Please let us know if you have any specific needs"
-                    "(A/V requirements, multiple microphones, a table, etc)."
-                    "Note for example that 'audio out' is not provided"
-                    "for your computer unless you tell us in advance.")
-    )
-
-    DURATION_CHOICES = [
-        (0, _("No preference")),
-        (1, _("10min")),
-        (2, _("20min")),
-    ]
-    duration = models.IntegerField(choices=DURATION_CHOICES,
-                                   verbose_name=_("Duration"))
 
     def can_edit(self):
         return True
