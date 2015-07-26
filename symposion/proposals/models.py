@@ -59,6 +59,10 @@ class ProposalSection(models.Model):
     def __str__(self):
         return self.section.name
 
+    class Meta:
+        verbose_name = _("Proposal Section")
+        verbose_name_plural = _("Proposal Sections")
+
 
 @python_2_unicode_compatible
 class ProposalKind(models.Model):
@@ -76,6 +80,10 @@ class ProposalKind(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = _("Proposal Kind")
+        verbose_name_plural = _("Proposal Kinds")
 
 
 @python_2_unicode_compatible
@@ -191,9 +199,9 @@ class AdditionalSpeaker(models.Model):
 
     def __str__(self):
         if self.status is self.SPEAKING_STATUS_PENDING:
-            return _(u"pending speaker (%s)") % self.speaker.email
+            return _("pending speaker (%s)") % self.speaker.email
         elif self.status is self.SPEAKING_STATUS_DECLINED:
-            return _(u"declined speaker (%s)") % self.speaker.email
+            return _("declined speaker (%s)") % self.speaker.email
         else:
             return self.speaker.name
 
@@ -218,3 +226,7 @@ class SupportingDocument(models.Model):
     def download_url(self):
         return reverse("proposal_document_download",
                        args=[self.pk, os.path.basename(self.file.name).lower()])
+
+    class Meta:
+        verbose_name = _("Supporting Document")
+        verbose_name_plural = _("Supporting Documents")
