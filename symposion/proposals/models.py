@@ -193,7 +193,7 @@ class AdditionalSpeaker(models.Model):
         if self.status is self.SPEAKING_STATUS_PENDING:
             return _(u"pending speaker (%s)") % self.speaker.email
         elif self.status is self.SPEAKING_STATUS_DECLINED:
-            return _(u"declined speaker (%s)" % self.speaker.email
+            return _(u"declined speaker (%s)") % self.speaker.email
         else:
             return self.speaker.name
 
