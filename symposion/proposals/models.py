@@ -11,6 +11,7 @@ from django.utils.timezone import now
 
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import ValidationError
 
 import reversion
 
@@ -76,6 +77,7 @@ class ProposalKind(models.Model):
     def __str__(self):
         return self.name
 
+
 @python_2_unicode_compatible
 class ProposalBase(models.Model):
 
@@ -110,8 +112,16 @@ class ProposalBase(models.Model):
         verbose_name=_("Submitted")
     )
     speaker = models.ForeignKey(Speaker, related_name="proposals", verbose_name=_("Speaker"))
+
+    def additional_speaker_validator(a_speaker):
+        if a_speaker.speaker.email == self.speaker.email:
+            raise ValidationError(_("%s is same as primary speaker.") % a_speaker.speaker.email)
+        if a_speaker in [self.additional_speakers]:
+            raise ValidationError(_("%s has already been in speakers.") % a_speaker.speaker.email)
+
     additional_speakers = models.ManyToManyField(Speaker, through="AdditionalSpeaker",
-                                                 blank=True, verbose_name=_("Addtional speakers"))
+                                                 blank=True, validators=[additional_speaker_validator],
+                                                 verbose_name=_("Addtional speakers"))
     cancelled = models.BooleanField(default=False, verbose_name=_("Cancelled"))
 
     def can_edit(self):
@@ -157,6 +167,7 @@ class ProposalBase(models.Model):
 reversion.register(ProposalBase)
 
 
+@python_2_unicode_compatible
 class AdditionalSpeaker(models.Model):
 
     SPEAKING_STATUS_PENDING = 1
@@ -177,6 +188,14 @@ class AdditionalSpeaker(models.Model):
         unique_together = ("speaker", "proposalbase")
         verbose_name = _("Addtional speaker")
         verbose_name_plural = _("Additional speakers")
+
+    def __str__(self):
+        if self.status is self.SPEAKING_STATUS_PENDING:
+            return _(u"pending speaker (%s)") % self.speaker.email
+        elif self.status is self.SPEAKING_STATUS_DECLINED:
+            return _(u"declined speaker (%s)" % self.speaker.email
+        else:
+            return self.speaker.name
 
 
 def uuid_filename(instance, filename):
