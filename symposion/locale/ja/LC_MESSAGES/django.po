@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symposion\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-07 19:32+0900\n"
-"PO-Revision-Date: 2015-07-24 07:20+0900\n"
+"POT-Creation-Date: 2015-07-26 22:24+0900\n"
+"PO-Revision-Date: 2015-07-26 22:28+0900\n"
 "Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
 "Language-Team: Japanese translation team <https://www.transifex.com/projects/"
 "p/symposion/language/ja/>\n"
@@ -18,136 +18,127 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: symposion/boxes/apps.py:8
-#| msgid "Symposion Reviews"
-msgid "Symposion Boxes"
-msgstr "ボックス"
-
-#: symposion/boxes/models.py:14 symposion/reviews/models.py:311
-#: symposion/schedule/models.py:70
-msgid "Label"
-msgstr "ラベル"
-
-#: symposion/boxes/models.py:17
-msgid "Created by"
-msgstr "作成 by"
-
-#: symposion/boxes/models.py:18
-msgid "Last updated by"
-msgstr "最終更新 by"
-
-#: symposion/boxes/models.py:24
-msgid "Box"
-msgstr "ボックス"
-
-#: symposion/boxes/models.py:25
+#: boxes/apps.py:8 boxes/models.py:25
 msgid "Boxes"
 msgstr "ボックス"
 
-#: symposion/cms/models.py:21
+#: boxes/models.py:14 reviews/models.py:311 schedule/models.py:69
+msgid "Label"
+msgstr "ラベル"
+
+#: boxes/models.py:17
+msgid "Created by"
+msgstr "作成 by"
+
+#: boxes/models.py:18
+msgid "Last updated by"
+msgstr "最終更新 by"
+
+#: boxes/models.py:24
+msgid "Box"
+msgstr "ボックス"
+
+#: cms/models.py:21
 msgid "Draft"
 msgstr "草稿"
 
-#: symposion/cms/models.py:22 symposion/reviews/models.py:301
+#: cms/models.py:22 reviews/models.py:301
 msgid "Public"
 msgstr "公開"
 
-#: symposion/cms/models.py:40
+#: cms/models.py:40
 msgid "page"
 msgstr "ページ"
 
-#: symposion/cms/models.py:41
+#: cms/models.py:41
 msgid "pages"
 msgstr "ページ"
 
-#: symposion/cms/models.py:59
+#: cms/models.py:59
 msgid "Path can only contain letters, numbers and hyphens and end with /"
 msgstr ""
 "パス名には、英数字、ハイフン(-)のみが使えます。また末尾は'/'の必要がありま"
 "す。"
 
-#: symposion/conference/apps.py:8
+#: conference/apps.py:9
 msgid "Symposion Conference"
 msgstr "カンファレンス管理"
 
-#: symposion/conference/models.py:18 symposion/proposals/models.py:86
-#: symposion/schedule/models.py:177
+#: conference/models.py:18 proposals/models.py:96
 msgid "Title"
 msgstr "タイトル"
 
-#: symposion/conference/models.py:21 symposion/conference/models.py:62
+#: conference/models.py:21 conference/models.py:62
 msgid "Start date"
 msgstr "開始日"
 
-#: symposion/conference/models.py:22 symposion/conference/models.py:63
+#: conference/models.py:22 conference/models.py:63
 msgid "End date"
 msgstr "終了日"
 
-#: symposion/conference/models.py:25
+#: conference/models.py:25
 msgid "Timezone"
 msgstr "タイムゾーン"
 
-#: symposion/conference/models.py:44
+#: conference/models.py:44
 msgid "conference"
 msgstr "カンファレンス"
 
-#: symposion/conference/models.py:45
+#: conference/models.py:45
 msgid "conferences"
 msgstr "カンファレンス"
 
-#: symposion/conference/models.py:56 symposion/sponsorship/models.py:51
+#: conference/models.py:56 sponsorship/models.py:51
 msgid "Conference"
 msgstr "カンファレンス"
 
-#: symposion/conference/models.py:58 symposion/proposals/models.py:73
-#: symposion/schedule/models.py:51 symposion/speakers/models.py:22
-#: symposion/sponsorship/models.py:52 symposion/sponsorship/models.py:234
-#: symposion/teams/models.py:24
+#: conference/models.py:58 proposals/models.py:78 schedule/models.py:50
+#: speakers/models.py:21 sponsorship/models.py:52 sponsorship/models.py:234
+#: teams/models.py:24
 msgid "Name"
 msgstr "名前"
 
-#: symposion/conference/models.py:59 symposion/proposals/models.py:74
-#: symposion/teams/models.py:23
+#: conference/models.py:59 proposals/models.py:79 teams/models.py:23
 msgid "Slug"
 msgstr "スラグ"
 
-#: symposion/conference/models.py:69
+#: conference/models.py:69
 msgid "section"
 msgstr "セクション"
 
-#: symposion/conference/models.py:70
+#: conference/models.py:70
 msgid "sections"
 msgstr "セクション"
 
-#: symposion/forms.py:10
+#: forms.py:15
 msgid "First name"
 msgstr "名前"
 
-#: symposion/forms.py:11
+#: forms.py:16
 msgid "Last name"
 msgstr "姓"
 
-#: symposion/forms.py:12
+#: forms.py:17
 msgid "Confirm Email"
 msgstr "電子メールの確認"
 
-#: symposion/forms.py:32
+#: forms.py:37
 msgid "Email address must match previously typed email address"
 msgstr "電子メールアドレスが合致していません。"
 
-#: symposion/proposals/actions.py:37
+#: proposals/actions.py:37
 msgid "Export selected objects as CSV file"
 msgstr "選択したものをCSVファイルに出力します。"
 
-#: symposion/proposals/apps.py:8
+#: proposals/apps.py:9
 msgid "Symposion Proposals"
 msgstr "講演提案"
 
-#: symposion/proposals/forms.py:19
+#: proposals/forms.py:18
 msgid "Email address"
 msgstr "電子メールアドレス"
 
-#: symposion/proposals/forms.py:34
+#: proposals/forms.py:33
 msgid ""
 "You have submitted the Proposal author's email address. Please select "
 "another email address."
@@ -155,40 +146,60 @@ msgstr ""
 "講演提案者の電子メールアドレスを投稿しました。他の電子メールアドレスを選択し"
 "てください。"
 
-#: symposion/proposals/forms.py:43
+#: proposals/forms.py:42
 msgid "This email address has already been invited to your talk proposal"
 msgstr "既に、この電子メールアドレスで、講演提案に招待されています。"
 
-#: symposion/proposals/models.py:34 symposion/proposals/models.py:71
-#: symposion/schedule/models.py:18 symposion/schedule/models.py:185
+#: proposals/models.py:35 proposals/models.py:76 schedule/models.py:17
+#: schedule/models.py:178
 msgid "Section"
 msgstr "セクション"
 
-#: symposion/proposals/models.py:36 symposion/schedule/models.py:85
+#: proposals/models.py:37 schedule/models.py:84
 msgid "Start"
-msgstr ""
+msgstr "開始日"
 
-#: symposion/proposals/models.py:37 symposion/schedule/models.py:86
+#: proposals/models.py:38 schedule/models.py:85
 msgid "End"
-msgstr ""
+msgstr "終了日"
 
-#: symposion/proposals/models.py:38
+#: proposals/models.py:39
 msgid "Closed"
-msgstr ""
+msgstr "締切済"
 
-#: symposion/proposals/models.py:39 symposion/schedule/models.py:19
+#: proposals/models.py:40 schedule/models.py:18
 msgid "Published"
 msgstr "公開"
 
-#: symposion/proposals/models.py:84 symposion/schedule/models.py:84
+#: proposals/models.py:63
+#| msgid "Proposal result"
+msgid "Proposal Section"
+msgstr "提案セクション"
+
+#: proposals/models.py:64
+#| msgid "Proposal results"
+msgid "Proposal Sections"
+msgstr "提案セクション"
+
+#: proposals/models.py:85
+#| msgid "Proposal"
+msgid "Proposal Kind"
+msgstr "提案の種類"
+
+#: proposals/models.py:86
+#| msgid "Proposal base"
+msgid "Proposal Kinds"
+msgstr "提案の種類"
+
+#: proposals/models.py:94 schedule/models.py:83
 msgid "Kind"
 msgstr "種類"
 
-#: symposion/proposals/models.py:88
+#: proposals/models.py:98
 msgid "Brief Description"
 msgstr "概要"
 
-#: symposion/proposals/models.py:90
+#: proposals/models.py:100
 msgid ""
 "If your proposal is accepted this will be made public and printed in the "
 "program. Should be one paragraph, maximum 400 characters."
@@ -196,11 +207,11 @@ msgstr ""
 "もし提案が受諾されたら、これは公開され、配布されるプログラムに印刷されます。"
 "段落は一つのみで、４００文字以内で記載してください。"
 
-#: symposion/proposals/models.py:94
+#: proposals/models.py:104
 msgid "Detailed Abstract"
 msgstr "提案の詳細"
 
-#: symposion/proposals/models.py:95
+#: proposals/models.py:105
 msgid ""
 "Detailed outline. Will be made public if your proposal is accepted. Edit "
 "using <a href='http://daringfireball.net/projects/markdown/basics' "
@@ -209,11 +220,11 @@ msgstr ""
 "講演詳細：提案が受諾された場合に公開されます。<a href=\"http://www.markdown."
 "jp/what-is-markdown/\" target='_blank'>Markdown</a>を用いて記述してください。"
 
-#: symposion/proposals/models.py:100
+#: proposals/models.py:110
 msgid "Addtional Notes"
 msgstr "備考"
 
-#: symposion/proposals/models.py:102
+#: proposals/models.py:112
 msgid ""
 "Anything else you'd like the program committee to know when making their "
 "selection: your past experience, etc. This is not made public. Edit using <a "
@@ -224,83 +235,108 @@ msgstr ""
 "てください。これは公開されることはありません。<a href=\"http://www.markdown."
 "jp/what-is-markdown/\" target='_blank'>Markdown</a>を用いて記述してください。"
 
-#: symposion/proposals/models.py:110
+#: proposals/models.py:120
 msgid "Submitted"
 msgstr "提案済み"
 
-#: symposion/proposals/models.py:112 symposion/proposals/models.py:170
-#: symposion/schedule/models.py:180 symposion/speakers/models.py:49
+#: proposals/models.py:122 proposals/models.py:191 speakers/models.py:48
 msgid "Speaker"
 msgstr "講演者"
 
-#: symposion/proposals/models.py:114
+#: proposals/models.py:126
+#, python-format
+msgid "%s is same as primary speaker."
+msgstr "%s は、代表講演者と同じです。"
+
+#: proposals/models.py:128
+#, python-format
+msgid "%s has already been in speakers."
+msgstr "%s はすでに講演者として登録されています。"
+
+#: proposals/models.py:132
 msgid "Addtional speakers"
 msgstr "追加講演者"
 
-#: symposion/proposals/models.py:115 symposion/schedule/models.py:183
+#: proposals/models.py:133 schedule/models.py:176
 msgid "Cancelled"
 msgstr "キャンセル済み"
 
-#: symposion/proposals/models.py:137
+#: proposals/models.py:155
 msgid "Undecided"
 msgstr "未決定"
 
-#: symposion/proposals/models.py:165
+#: proposals/models.py:186
 msgid "Pending"
 msgstr "ペンディング"
 
-#: symposion/proposals/models.py:166 symposion/reviews/models.py:228
+#: proposals/models.py:187 reviews/models.py:228
 msgid "Accepted"
 msgstr "アクセプト"
 
-#: symposion/proposals/models.py:167
+#: proposals/models.py:188
 msgid "Declined"
 msgstr "リジェクト"
 
-#: symposion/proposals/models.py:171
+#: proposals/models.py:192
 msgid "Proposalbase"
 msgstr ""
 
-#: symposion/proposals/models.py:172 symposion/reviews/models.py:234
-#: symposion/schedule/models.py:265
+#: proposals/models.py:193 reviews/models.py:234
 msgid "Status"
 msgstr "状態"
 
-#: symposion/proposals/models.py:176
+#: proposals/models.py:197
 msgid "Addtional speaker"
 msgstr "追加講演者"
 
-#: symposion/proposals/models.py:177 symposion/schedule/models.py:182
+#: proposals/models.py:198
 msgid "Additional speakers"
 msgstr "追加講演者"
 
-#: symposion/proposals/models.py:188 symposion/reviews/models.py:55
-#: symposion/reviews/models.py:95 symposion/reviews/models.py:110
-#: symposion/reviews/models.py:193 symposion/reviews/models.py:216
-#: symposion/reviews/models.py:296 symposion/reviews/models.py:323
+#: proposals/models.py:202
+#, python-format
+#| msgid "Addtional speakers"
+msgid "pending speaker (%s)"
+msgstr "保留中の追加講演者(%s)"
+
+#: proposals/models.py:204
+#, python-format
+#| msgid "Addtional speakers"
+msgid "declined speaker (%s)"
+msgstr "却下した追加講演者(%s)"
+
+#: proposals/models.py:217 reviews/models.py:55 reviews/models.py:95
+#: reviews/models.py:110 reviews/models.py:193 reviews/models.py:216
+#: reviews/models.py:296 reviews/models.py:323
 msgid "Proposal"
 msgstr "講演提案"
 
-#: symposion/proposals/models.py:190
+#: proposals/models.py:219
 msgid "Uploaded by"
 msgstr "アップロード by "
 
-#: symposion/proposals/models.py:192
+#: proposals/models.py:221
 msgid "Created at"
 msgstr "作成日"
 
-#: symposion/proposals/models.py:194 symposion/sponsorship/models.py:218
-#: symposion/sponsorship/models.py:278
+#: proposals/models.py:223 sponsorship/models.py:218 sponsorship/models.py:278
 msgid "File"
 msgstr "ファイル"
 
-#: symposion/proposals/models.py:195 symposion/schedule/models.py:178
-#: symposion/sponsorship/models.py:55 symposion/sponsorship/models.py:235
-#: symposion/teams/models.py:25
+#: proposals/models.py:224 sponsorship/models.py:55 sponsorship/models.py:235
+#: teams/models.py:25
 msgid "Description"
 msgstr "記述"
 
-#: symposion/proposals/views.py:42
+#: proposals/models.py:231
+msgid "Supporting Document"
+msgstr "追加文書"
+
+#: proposals/models.py:232
+msgid "Supporting Documents"
+msgstr "追加文書"
+
+#: proposals/views.py:42
 #, python-brace-format
 msgid ""
 "To submit a proposal, please <a href='{0}'>log in</a> and create a speaker "
@@ -309,362 +345,319 @@ msgstr ""
 " <a href='{0}'>ログイン</a> して、ダッシュボードから講演者プロフィールを入力"
 "してから、提案の投稿をおねがいします。"
 
-#: symposion/proposals/views.py:51
+#: proposals/views.py:51
 #, python-brace-format
 msgid "To submit a proposal, first <a href='{0}'>create a speaker profile</a>."
 msgstr ""
 "講演提案の投稿前に、まず <a href='{0}'>講演者プロフィール</a>を作成してくださ"
 "い。"
 
-#: symposion/proposals/views.py:91
+#: proposals/views.py:91
 msgid "Proposal submitted."
 msgstr "提案は投稿されました。"
 
-#: symposion/reviews/apps.py:8
+#: reviews/apps.py:9
 msgid "Symposion Reviews"
 msgstr "レビュー"
 
-#: symposion/reviews/forms.py:41
+#: reviews/forms.py:41
 msgid "Talk ids"
 msgstr "講演ID"
 
-#: symposion/reviews/forms.py:43
+#: reviews/forms.py:43
 msgid "Provide a comma seperated list of talk ids to accept."
 msgstr "カンマ区切りのリストで、受諾する講演IDを入力してください。"
 
-#: symposion/reviews/models.py:34
+#: reviews/models.py:34
 msgid "+1 — Good proposal and I will argue for it to be accepted."
 msgstr "+1 — 良い提案で、採用を提案したいと思う。"
 
-#: symposion/reviews/models.py:35
+#: reviews/models.py:35
 msgid "+0 — OK proposal, but I will not argue for it to be accepted."
 msgstr "+0 — 提案はOKだが、採用を薦めたいとは思わない。"
 
-#: symposion/reviews/models.py:36
+#: reviews/models.py:36
 msgid "−0 — Weak proposal, but I will not argue strongly against acceptance."
 msgstr "−0 — 少し弱い提案、しかし採用するなら強くは反対しない。"
 
-#: symposion/reviews/models.py:37
+#: reviews/models.py:37
 msgid "−1 — Serious issues and I will argue to reject this proposal."
 msgstr "−1 — 大きな問題があり、提案を却下したいと思う。"
 
-#: symposion/reviews/models.py:50
+#: reviews/models.py:50
 msgid "auto-assigned, initial"
 msgstr ""
 
-#: symposion/reviews/models.py:51
+#: reviews/models.py:51
 msgid "opted-in"
 msgstr ""
 
-#: symposion/reviews/models.py:52
+#: reviews/models.py:52
 msgid "auto-assigned, later"
 msgstr ""
 
-#: symposion/reviews/models.py:56 symposion/reviews/models.py:96
-#: symposion/reviews/models.py:111 symposion/reviews/models.py:194
-#: symposion/schedule/models.py:263 symposion/speakers/models.py:21
-#: symposion/teams/models.py:84
+#: reviews/models.py:56 reviews/models.py:96 reviews/models.py:111
+#: reviews/models.py:194 speakers/models.py:20 teams/models.py:84
 msgid "User"
 msgstr "ユーザ"
 
-#: symposion/reviews/models.py:58
+#: reviews/models.py:58
 msgid "Origin"
 msgstr ""
 
-#: symposion/reviews/models.py:60
+#: reviews/models.py:60
 msgid "Assigned at"
 msgstr "アサインされた at"
 
-#: symposion/reviews/models.py:61
+#: reviews/models.py:61
 msgid "Opted out"
 msgstr "オプトアウト"
 
-#: symposion/reviews/models.py:98 symposion/teams/models.py:89
+#: reviews/models.py:98 teams/models.py:89
 msgid "Message"
 msgstr "メッセージ"
 
-#: symposion/reviews/models.py:99 symposion/reviews/models.py:117
-#: symposion/reviews/models.py:199
+#: reviews/models.py:99 reviews/models.py:117 reviews/models.py:199
 msgid "Submitted at"
 msgstr "提案日"
 
-#: symposion/reviews/models.py:103
+#: reviews/models.py:103
 msgid "proposal message"
 msgstr "提案メッセージ"
 
-#: symposion/reviews/models.py:104
+#: reviews/models.py:104
 msgid "proposal messages"
 msgstr "提案メッセージ"
 
-#: symposion/reviews/models.py:115 symposion/reviews/models.py:198
+#: reviews/models.py:115 reviews/models.py:198
 msgid "Vote"
 msgstr "投票"
 
-#: symposion/reviews/models.py:116 symposion/reviews/models.py:305
+#: reviews/models.py:116 reviews/models.py:305
 msgid "Comment"
 msgstr "コメント"
 
-#: symposion/reviews/models.py:186
+#: reviews/models.py:186
 msgid "review"
 msgstr "レビュー"
 
-#: symposion/reviews/models.py:187
+#: reviews/models.py:187
 msgid "reviews"
 msgstr "レビュー"
 
-#: symposion/reviews/models.py:203
+#: reviews/models.py:203
 msgid "latest vote"
 msgstr "最新の投票"
 
-#: symposion/reviews/models.py:204
+#: reviews/models.py:204
 msgid "latest votes"
 msgstr "最新の投票"
 
-#: symposion/reviews/models.py:217
+#: reviews/models.py:217
 msgid "Score"
 msgstr "スコア"
 
-#: symposion/reviews/models.py:218
+#: reviews/models.py:218
 msgid "Comment count"
 msgstr "コメントの数"
 
-#: symposion/reviews/models.py:219
+#: reviews/models.py:219
 msgid "Vote count"
 msgstr "投票数"
 
-#: symposion/reviews/models.py:220
+#: reviews/models.py:220
 msgid "Plus one"
 msgstr "プラス１"
 
-#: symposion/reviews/models.py:221
+#: reviews/models.py:221
 msgid "Plus zero"
 msgstr "プラス０"
 
-#: symposion/reviews/models.py:222
+#: reviews/models.py:222
 msgid "Minus zero"
 msgstr "マイナス０"
 
-#: symposion/reviews/models.py:223
+#: reviews/models.py:223
 msgid "Minus one"
 msgstr "マイナス１"
 
-#: symposion/reviews/models.py:230
+#: reviews/models.py:230
 msgid "accepted"
 msgstr "受付済み"
 
-#: symposion/reviews/models.py:231 symposion/sponsorship/admin.py:68
-#: symposion/teams/models.py:75
+#: reviews/models.py:231 sponsorship/admin.py:68 teams/models.py:75
 msgid "rejected"
 msgstr "却下済み"
 
-#: symposion/reviews/models.py:232
+#: reviews/models.py:232
 msgid "undecided"
 msgstr "未決定"
 
-#: symposion/reviews/models.py:233
+#: reviews/models.py:233
 msgid "standby"
 msgstr "スタンバイ"
 
-#: symposion/reviews/models.py:291
+#: reviews/models.py:291
 msgid "Proposal result"
 msgstr "提案の結果"
 
-#: symposion/reviews/models.py:292
+#: reviews/models.py:292
 msgid "Proposal results"
 msgstr "提案の結果"
 
-#: symposion/reviews/models.py:297
+#: reviews/models.py:297
 msgid "Commenter"
 msgstr "コメントした人"
 
-#: symposion/reviews/models.py:298 symposion/sponsorship/models.py:216
-#: symposion/sponsorship/models.py:277
+#: reviews/models.py:298 sponsorship/models.py:216 sponsorship/models.py:277
 msgid "Text"
 msgstr "テキスト"
 
-#: symposion/reviews/models.py:301
+#: reviews/models.py:301
 msgid "public"
 msgstr "公開"
 
-#: symposion/reviews/models.py:301
+#: reviews/models.py:301
 msgid "private"
 msgstr "非公開"
 
-#: symposion/reviews/models.py:302
+#: reviews/models.py:302
 msgid "Commented at"
 msgstr "コメント日"
 
-#: symposion/reviews/models.py:306
+#: reviews/models.py:306
 msgid "Comments"
 msgstr "コメント"
 
-#: symposion/reviews/models.py:312 symposion/reviews/models.py:328
+#: reviews/models.py:312 reviews/models.py:328
 msgid "From address"
 msgstr "送信元の電子メールアドレス"
 
-#: symposion/reviews/models.py:313 symposion/reviews/models.py:329
+#: reviews/models.py:313 reviews/models.py:329
 msgid "Subject"
 msgstr "題目"
 
-#: symposion/reviews/models.py:314 symposion/reviews/models.py:330
+#: reviews/models.py:314 reviews/models.py:330
 msgid "Body"
 msgstr "本体"
 
-#: symposion/reviews/models.py:317
+#: reviews/models.py:317
 msgid "Notification template"
 msgstr "通知テンプレート"
 
-#: symposion/reviews/models.py:318
+#: reviews/models.py:318
 msgid "Notification templates"
 msgstr "通知テンプレート"
 
-#: symposion/reviews/models.py:325
+#: reviews/models.py:325
 msgid "Template"
 msgstr "テンプレート"
 
-#: symposion/reviews/models.py:326
+#: reviews/models.py:326
 msgid "Timestamp"
 msgstr "タイムスタンプ"
 
-#: symposion/reviews/models.py:327
+#: reviews/models.py:327
 msgid "To address"
 msgstr "宛先の電子メールアドレス"
 
-#: symposion/schedule/apps.py:7
-#| msgid "Symposion Speakers"
+#: schedule/apps.py:9
 msgid "Symposion Schedule"
 msgstr "スケジュール"
 
-#: symposion/schedule/models.py:20
+#: schedule/models.py:19
 msgid "Hide schedule from overall conference view"
 msgstr "全体のカンファレンスのビューからスケジュールを隠す"
 
-#: symposion/schedule/models.py:27 symposion/schedule/models.py:34
-#: symposion/schedule/models.py:50
+#: schedule/models.py:26 schedule/models.py:33 schedule/models.py:49
 msgid "Schedule"
 msgstr "スケジュール"
 
-#: symposion/schedule/models.py:28
+#: schedule/models.py:27
 msgid "Schedules"
 msgstr "スケジュール"
 
-#: symposion/schedule/models.py:35
+#: schedule/models.py:34
 msgid "Date"
-msgstr ""
+msgstr "日付"
 
-#: symposion/schedule/models.py:43
+#: schedule/models.py:42
 msgid "date"
 msgstr "日付"
 
-#: symposion/schedule/models.py:44
+#: schedule/models.py:43
 msgid "dates"
 msgstr "日程"
 
-#: symposion/schedule/models.py:52 symposion/sponsorship/models.py:53
+#: schedule/models.py:51 sponsorship/models.py:53
 msgid "Order"
 msgstr "順序"
 
-#: symposion/schedule/models.py:58 symposion/schedule/models.py:161
+#: schedule/models.py:57 schedule/models.py:160
 msgid "Room"
 msgstr "部屋"
 
-#: symposion/schedule/models.py:59
+#: schedule/models.py:58
 msgid "Rooms"
 msgstr "部屋"
 
-#: symposion/schedule/models.py:69
+#: schedule/models.py:68
 msgid "schedule"
 msgstr "スケジュール"
 
-#: symposion/schedule/models.py:76
+#: schedule/models.py:75
 msgid "Slot kind"
 msgstr "講演枠の種類"
 
-#: symposion/schedule/models.py:77
+#: schedule/models.py:76
 msgid "Slot kinds"
 msgstr "講演枠の種類"
 
-#: symposion/schedule/models.py:83 symposion/schedule/models.py:215
+#: schedule/models.py:82
 msgid "Day"
-msgstr ""
+msgstr "日程"
 
-#: symposion/schedule/models.py:87
+#: schedule/models.py:86
 msgid "Content override"
 msgstr "上書きコンテンツ"
 
-#: symposion/schedule/models.py:150
+#: schedule/models.py:149
 msgid "slot"
 msgstr "講演枠"
 
-#: symposion/schedule/models.py:151
+#: schedule/models.py:150
 msgid "slots"
 msgstr "講演枠"
 
-#: symposion/schedule/models.py:160 symposion/schedule/models.py:176
+#: schedule/models.py:159 schedule/models.py:175
 msgid "Slot"
 msgstr "スロット"
 
-#: symposion/schedule/models.py:169
+#: schedule/models.py:168
 msgid "Slot room"
 msgstr "講演枠の部屋割り当て"
 
-#: symposion/schedule/models.py:170
+#: schedule/models.py:169
 msgid "Slot rooms"
 msgstr "講演枠の部屋割り当て"
 
-#: symposion/schedule/models.py:179
-msgid "Abstract"
-msgstr "講演概要"
-
-#: symposion/schedule/models.py:184
+#: schedule/models.py:177
 msgid "Proposal base"
 msgstr "元の提案"
 
-#: symposion/schedule/models.py:208
+#: schedule/models.py:233
 msgid "presentation"
 msgstr "プレゼンテーション"
 
-#: symposion/schedule/models.py:209
+#: schedule/models.py:234
 msgid "presentations"
 msgstr "プレゼンテーション"
 
-#: symposion/schedule/models.py:216
-msgid "Slots"
-msgstr "講演枠"
-
-#: symposion/schedule/models.py:247 symposion/schedule/models.py:262
-msgid "Session"
-msgstr "セッション"
-
-#: symposion/schedule/models.py:248
-msgid "Sessions"
-msgstr "セッション"
-
-#: symposion/schedule/models.py:258
-msgid "Session Chair"
-msgstr "セッション・チェア"
-
-#: symposion/schedule/models.py:259
-msgid "Session Runner"
-msgstr "セッション進行"
-
-#: symposion/schedule/models.py:264
-msgid "Role"
-msgstr "役割"
-
-#: symposion/schedule/models.py:271
-msgid "Session role"
-msgstr "セッションでの役割"
-
-#: symposion/schedule/models.py:272
-msgid "Session roles"
-msgstr "セッションでの役割"
-
-#: symposion/speakers/apps.py:8
+#: speakers/apps.py:9
 msgid "Symposion Speakers"
 msgstr "講演者管理"
 
-#: symposion/speakers/forms.py:17
+#: speakers/forms.py:17
 msgid ""
 "If you've submitted multiple proposals, please let us know if you only want "
 "to give one or if you'd like to give two talks."
@@ -672,15 +665,15 @@ msgstr ""
 "複数の提案をしている場合に、どれか一つの講演をしたいのか、２つの講演をしたい"
 "のか、を記入してください。"
 
-#: symposion/speakers/forms.py:48
+#: speakers/forms.py:48
 msgid "Please limit speaker biography to 100 words or less"
 msgstr "講演者略歴は１００ワード以内にしてください。"
 
-#: symposion/speakers/models.py:23
+#: speakers/models.py:22
 msgid "As you would like it to appear in the conference program."
 msgstr "カンファレンスのプログラム冊子に掲載されたい表現にしてください。"
 
-#: symposion/speakers/models.py:26
+#: speakers/models.py:25
 msgid ""
 "A little bit about you. 100 words or less, please. This will be used in "
 "print publications so please keep it simple, no links or formatting."
@@ -688,227 +681,227 @@ msgstr ""
 "貴方について記述してください。１００ワード未満です。この記述は、印刷配布物に"
 "記載されます。平易な文で、リンクや整形はしないでください。"
 
-#: symposion/speakers/models.py:30
+#: speakers/models.py:29
 msgid "Photo"
 msgstr "写真"
 
-#: symposion/speakers/models.py:34
+#: speakers/models.py:33
 msgid "Your Twitter account"
 msgstr "Twitterアカウント"
 
-#: symposion/speakers/models.py:36 symposion/sponsorship/models.py:78
+#: speakers/models.py:35 sponsorship/models.py:78
 msgid "Annotation"
 msgstr "注記"
 
-#: symposion/speakers/models.py:38
+#: speakers/models.py:37
 msgid "Invite_email"
 msgstr "招待電子メール"
 
-#: symposion/speakers/models.py:40
+#: speakers/models.py:39
 msgid "Invite token"
 msgstr "招待トークン"
 
-#: symposion/speakers/models.py:44 symposion/teams/models.py:40
+#: speakers/models.py:43 teams/models.py:40
 msgid "Created"
 msgstr "作成済み"
 
-#: symposion/speakers/models.py:50
+#: speakers/models.py:49
 msgid "Speakers"
 msgstr "講演者"
 
-#: symposion/speakers/views.py:38 symposion/speakers/views.py:66
+#: speakers/views.py:38 speakers/views.py:66
 msgid "Speaker profile created."
 msgstr "講演者プロフィールが作成されました。"
 
-#: symposion/speakers/views.py:93
+#: speakers/views.py:93
 msgid "You have been associated with all pending talk proposals"
-msgstr ""
+msgstr "あなたは、保留された全ての講演提案に割り当てられました。"
 
-#: symposion/sponsorship/admin.py:60 symposion/sponsorship/models.py:72
+#: sponsorship/admin.py:60 sponsorship/models.py:72
 msgid "Applicant"
 msgstr "応募者"
 
-#: symposion/sponsorship/admin.py:66
+#: sponsorship/admin.py:66
 msgid "unreviewed"
 msgstr "レビュー前"
 
-#: symposion/sponsorship/admin.py:67
+#: sponsorship/admin.py:67
 msgid "approved"
 msgstr "承認済み"
 
-#: symposion/sponsorship/admin.py:116
+#: sponsorship/admin.py:116
 msgid "None"
-msgstr ""
+msgstr "なし"
 
-#: symposion/sponsorship/apps.py:8
+#: sponsorship/apps.py:9
 msgid "Symposion Sponsorship"
 msgstr "スポンサー"
 
-#: symposion/sponsorship/forms.py:69
+#: sponsorship/forms.py:69
 #, python-format
 msgid "maximum %s words"
 msgstr "最大 %s 語"
 
-#: symposion/sponsorship/models.py:31 symposion/sponsorship/models.py:219
+#: sponsorship/models.py:31 sponsorship/models.py:219
 msgid "Web Logo"
 msgstr "Web用のロゴ"
 
-#: symposion/sponsorship/models.py:35
+#: sponsorship/models.py:35
 msgid "Print Logo"
 msgstr "印刷用のロゴ"
 
-#: symposion/sponsorship/models.py:39
+#: sponsorship/models.py:39
 msgid "Web Desc"
 msgstr "Web用の説明文"
 
-#: symposion/sponsorship/models.py:43
+#: sponsorship/models.py:43
 msgid "Print Desc"
 msgstr "印刷用の説明文"
 
-#: symposion/sponsorship/models.py:54
+#: sponsorship/models.py:54
 msgid "Cost"
 msgstr "コスト"
 
-#: symposion/sponsorship/models.py:55
+#: sponsorship/models.py:55
 msgid "This is private."
 msgstr "これは非公開です。"
 
-#: symposion/sponsorship/models.py:59
+#: sponsorship/models.py:59
 msgid "Sponsor level"
 msgstr "スポンサーのグレード"
 
-#: symposion/sponsorship/models.py:60
+#: sponsorship/models.py:60
 msgid "Sponsor levels"
 msgstr "スポンサーのグレード"
 
-#: symposion/sponsorship/models.py:75
+#: sponsorship/models.py:75
 msgid "Sponsor Name"
 msgstr "スポンサー名"
 
-#: symposion/sponsorship/models.py:76
+#: sponsorship/models.py:76
 msgid "Display URL"
 msgstr "表示するURL"
 
-#: symposion/sponsorship/models.py:77
+#: sponsorship/models.py:77
 msgid "External URL"
 msgstr "外部URL"
 
-#: symposion/sponsorship/models.py:79
+#: sponsorship/models.py:79
 msgid "Contact Name"
 msgstr "連絡先の名前"
 
-#: symposion/sponsorship/models.py:80
+#: sponsorship/models.py:80
 msgid "Contact Email"
 msgstr "連絡先のEmail"
 
-#: symposion/sponsorship/models.py:81
+#: sponsorship/models.py:81
 msgid "level"
 msgstr "グレード"
 
-#: symposion/sponsorship/models.py:82
+#: sponsorship/models.py:82
 msgid "added"
 msgstr "追加済み"
 
-#: symposion/sponsorship/models.py:83
+#: sponsorship/models.py:83
 msgid "active"
 msgstr "有効"
 
-#: symposion/sponsorship/models.py:87
+#: sponsorship/models.py:87
 msgid "Sponsor logo"
 msgstr "スポンサーロゴ"
 
-#: symposion/sponsorship/models.py:91
+#: sponsorship/models.py:91
 msgid "Web logo benefit is complete"
 msgstr "Web用ロゴの掲出は完了済みです"
 
-#: symposion/sponsorship/models.py:92
+#: sponsorship/models.py:92
 msgid "Print logo benefit is complete"
 msgstr "印刷用ロゴの手配は完了済みです。"
 
-#: symposion/sponsorship/models.py:93
+#: sponsorship/models.py:93
 msgid "Print description benefit is complete"
 msgstr "印刷用の説明は、入稿済みです。"
 
-#: symposion/sponsorship/models.py:94
+#: sponsorship/models.py:94
 msgid "Company description benefit is complete"
 msgstr "会社概要の掲出は完了済みです。"
 
-#: symposion/sponsorship/models.py:102 symposion/sponsorship/models.py:267
+#: sponsorship/models.py:102 sponsorship/models.py:267
 msgid "Sponsor"
 msgstr "スポンサー"
 
-#: symposion/sponsorship/models.py:103
+#: sponsorship/models.py:103
 msgid "Sponsors"
 msgstr "スポンサー"
 
-#: symposion/sponsorship/models.py:217
+#: sponsorship/models.py:217
 msgid "Rich Text"
 msgstr "リッチテキスト"
 
-#: symposion/sponsorship/models.py:220 symposion/sponsorship/models.py:225
+#: sponsorship/models.py:220 sponsorship/models.py:225
 msgid "Simple"
 msgstr "シンプル"
 
-#: symposion/sponsorship/models.py:221
+#: sponsorship/models.py:221
 msgid "Option"
 msgstr "オプション"
 
-#: symposion/sponsorship/models.py:236
+#: sponsorship/models.py:236
 msgid "Type"
 msgstr "タイプ"
 
-#: symposion/sponsorship/models.py:238
+#: sponsorship/models.py:238
 msgid "Content type"
 msgstr "コンテンツタイプ"
 
-#: symposion/sponsorship/models.py:248 symposion/sponsorship/models.py:268
+#: sponsorship/models.py:248 sponsorship/models.py:268
 msgid "Benefit"
 msgstr "スポンサー特典"
 
-#: symposion/sponsorship/models.py:249
+#: sponsorship/models.py:249
 msgid "Level"
 msgstr "グレード"
 
-#: symposion/sponsorship/models.py:252 symposion/sponsorship/models.py:272
+#: sponsorship/models.py:252 sponsorship/models.py:272
 msgid "Max words"
 msgstr "最大語数"
 
-#: symposion/sponsorship/models.py:253 symposion/sponsorship/models.py:273
+#: sponsorship/models.py:253 sponsorship/models.py:273
 msgid "Other limits"
 msgstr "他の制限"
 
-#: symposion/sponsorship/models.py:257
+#: sponsorship/models.py:257
 msgid "Benefit level"
 msgstr "スポンサー特典"
 
-#: symposion/sponsorship/models.py:258
+#: sponsorship/models.py:258
 msgid "Benefit levels"
 msgstr "特典レベル"
 
-#: symposion/sponsorship/models.py:269
+#: sponsorship/models.py:269
 msgid "Active"
 msgstr "有効"
 
-#: symposion/sponsorship/models.py:282
+#: sponsorship/models.py:282
 msgid "True - benefit complete; False - benefit incomplete; Null - n/a"
 msgstr "True - 特典は実施済み、 Flase - 特典は未実施, Null - N/A"
 
-#: symposion/sponsorship/models.py:286
+#: sponsorship/models.py:286
 msgid "Sponsor benefit"
 msgstr "スポンサー特典"
 
-#: symposion/sponsorship/models.py:287
+#: sponsorship/models.py:287
 msgid "Sponsor benefits"
 msgstr "スポンサー特典"
 
-#: symposion/sponsorship/models.py:304
+#: sponsorship/models.py:304
 #, python-format
 msgid "Sponsorship level only allows for %(word)s words, you provided %(num)d."
 msgstr ""
 "スポンサーレベルには %(word)s 語まで許されますが、 %(num)d　語入力していま"
 "す。"
 
-#: symposion/sponsorship/views.py:38
+#: sponsorship/views.py:37
 msgid ""
 "Thank you for your sponsorship application. Please update your benefit "
 "details below."
@@ -916,137 +909,140 @@ msgstr ""
 "スポンサーにご応募ありがとうございました。以下の特典について情報更新してくだ"
 "さい。"
 
-#: symposion/sponsorship/views.py:43
+#: sponsorship/views.py:42
 msgid "Thank you for your sponsorship application."
 msgstr "スポンサーにご応募ありがとうございました。"
 
-#: symposion/sponsorship/views.py:95
+#: sponsorship/views.py:94
 msgid "Sponsorship details have been updated"
 msgstr "スポンサーの詳細が更新されました。"
 
-#: symposion/teams/apps.py:8
-#| msgid "Symposion Speakers"
-msgid "Symposion Teams"
+#: teams/apps.py:8 teams/models.py:69
+msgid "Teams"
 msgstr "チーム"
 
-#: symposion/teams/forms.py:15
+#: teams/forms.py:15
 msgid "Email"
 msgstr "電子メール"
 
-#: symposion/teams/forms.py:16
+#: teams/forms.py:16
 msgid "email address must be that of an account on this conference site"
 msgstr ""
 "電子メールアドレスは、このサイトのアカウントのものでなければなりません。"
 
-#: symposion/teams/forms.py:28
+#: teams/forms.py:28
 msgid "valid email address required"
 msgstr "適切な電子メールアドレスを入力してください。"
 
-#: symposion/teams/forms.py:36
+#: teams/forms.py:36
 #, python-format
 msgid "no account with email address <b>%s</b> found on this conference site"
 msgstr "電子メールアドレス <b>%s</b> のアカウントは、このサイトにありません。"
 
-#: symposion/teams/forms.py:42
+#: teams/forms.py:42
 msgid "user already in team"
 msgstr "ユーザはすでにチームに参加しています。"
 
-#: symposion/teams/forms.py:45
+#: teams/forms.py:45
 msgid "user already invited to team"
 msgstr "ユーザは、すでにチームに招待されています。"
 
-#: symposion/teams/models.py:14
+#: teams/models.py:14
 msgid "open"
 msgstr ""
 
-#: symposion/teams/models.py:15
+#: teams/models.py:15
 msgid "by application"
 msgstr "応募"
 
-#: symposion/teams/models.py:16
+#: teams/models.py:16
 msgid "by invitation"
 msgstr "招待"
 
-#: symposion/teams/models.py:27
+#: teams/models.py:27
 msgid "Access"
 msgstr "アクセス"
 
-#: symposion/teams/models.py:32
+#: teams/models.py:32
 msgid "Permissions"
 msgstr "権限"
 
-#: symposion/teams/models.py:37
+#: teams/models.py:37
 msgid "Manager permissions"
 msgstr "管理者権限"
 
-#: symposion/teams/models.py:68 symposion/teams/models.py:86
+#: teams/models.py:68 teams/models.py:86
 msgid "Team"
 msgstr "チーム"
 
-#: symposion/teams/models.py:69
-msgid "Teams"
-msgstr "チーム"
-
-#: symposion/teams/models.py:72
+#: teams/models.py:72
 msgid "applied"
 msgstr "応募された"
 
-#: symposion/teams/models.py:73
+#: teams/models.py:73
 msgid "invited"
 msgstr "招待された"
 
-#: symposion/teams/models.py:74
+#: teams/models.py:74
 msgid "declined"
 msgstr "却下された"
 
-#: symposion/teams/models.py:76
+#: teams/models.py:76
 msgid "member"
 msgstr "メンバー"
 
-#: symposion/teams/models.py:77
+#: teams/models.py:77
 msgid "manager"
 msgstr "管理者"
 
-#: symposion/teams/models.py:88
+#: teams/models.py:88
 msgid "State"
 msgstr "状態"
 
-#: symposion/teams/models.py:92
+#: teams/models.py:92
 msgid "Membership"
 msgstr "メンバーシップ"
 
-#: symposion/teams/models.py:93
+#: teams/models.py:93
 msgid "Memberships"
 msgstr "メンバーシップ"
 
-#: symposion/teams/views.py:71
+#: teams/views.py:71
 msgid "Invitation created."
 msgstr "招待されました。"
 
-#: symposion/teams/views.py:99
+#: teams/views.py:99
 msgid "Joined team."
 msgstr "チームに参加しました。"
 
-#: symposion/teams/views.py:115
+#: teams/views.py:115
 msgid "Left team."
 msgstr "チームを離れました。"
 
-#: symposion/teams/views.py:137
+#: teams/views.py:137
 msgid "Applied to join team."
 msgstr "チーム参加に応募しました。"
 
-#: symposion/teams/views.py:153
+#: teams/views.py:153
 msgid "Promoted to manager."
 msgstr "管理者に昇進しました。"
 
-#: symposion/teams/views.py:167
+#: teams/views.py:167
 msgid "Demoted from manager."
 msgstr "管理者から降格しました。"
 
-#: symposion/teams/views.py:181
+#: teams/views.py:181
 msgid "Accepted application."
 msgstr "応募が受諾されました。"
 
-#: symposion/teams/views.py:195
+#: teams/views.py:195
 msgid "Rejected application."
 msgstr "応募が却下されました。"
+
+#: views.py:60
+msgid ""
+"Cannot process your signup request properly. Please signup again with "
+"another email address."
+msgstr ""
+"ユーザ登録を正しく処理できませんでした。別の電子メールアドレスで再度ためして"
+"もらえないでしょうか。"
