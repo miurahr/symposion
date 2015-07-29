@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from timezones.fields import TimeZoneField
+from timezone_field import TimeZoneField
 
 
 CONFERENCE_CACHE = {}
