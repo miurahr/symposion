@@ -8,7 +8,6 @@ from django.utils.encoding import python_2_unicode_compatible
 
 from symposion.proposals.models import ProposalBase
 from symposion.conference.models import Section
-from symposion.speakers.models import Speaker
 
 
 @python_2_unicode_compatible
@@ -232,4 +231,3 @@ class Presentation(models.Model):
         ordering = ["slot"]
         verbose_name = _("presentation")
         verbose_name_plural = _("presentations")
-
