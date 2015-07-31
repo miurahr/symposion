@@ -121,7 +121,7 @@ class ProposalBase(models.Model):
     )
     speaker = models.ForeignKey(Speaker, related_name="proposals", verbose_name=_("Speaker"))
 
-    def additional_speaker_validator(a_speaker):
+    def additional_speaker_validator(self, a_speaker):
         if a_speaker.speaker.email == self.speaker.email:
             raise ValidationError(_("%s is same as primary speaker.") % a_speaker.speaker.email)
         if a_speaker in [self.additional_speakers]:
