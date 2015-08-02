@@ -30,14 +30,21 @@ class SlotAdmin(admin.ModelAdmin):
 
 
 class RoomAdmin(admin.ModelAdmin):
-    list_filter=("schedule",)
-    list_display=("name", "order", "schedule"),
     inlines = [SlotRoomInline, ]
 
 
 class PresentationAdmin(admin.ModelAdmin):
     model = Presentation
     list_filter = ("section", "cancelled", "slot")
+    readonly_fields = ("title", "speaker", "abstract", "description")
+    fieldsets = (
+        (None, {
+          'fields': ("section", "slot", "proposal_base")
+        }),
+        ('Proposal Details', {
+          'fields': ("title", "speaker", "abstract", "description")
+        }),
+    )
 
 
 admin.site.register(Schedule, ScheduleAdmin)
