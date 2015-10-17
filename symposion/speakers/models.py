@@ -67,9 +67,9 @@ class Speaker(models.Model):
     @property
     def all_presentations(self):
         presentations = []
-        if self.presentations:
-            for p in self.presentations.all():
-                presentations.append(p)
-            for p in self.copresentations.all():
-                presentations.append(p)
+#        if self.presentations:
+#            for p in self.presentations.all():
+#                presentations.append(p)
+#            for p in self.copresentations.all():
+#                presentations.append(p)
         return presentations
